@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="Discover original abstract paintings by Art Elias, a modern artist based in Zutphen, Netherlands. Unique contemporary artworks and custom commissions available.">
-  <meta charset="UTF-8">
- <link rel="icon" type="image/jpg" href="images/Welp.jpg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Abstract Paintings by ArtElias | Modern Artist in Zutphen</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO TITLE -->
+  <title>Custom Abstract Paintings by Art Elias | Modern Artist in Zutphen</title>
+
+  <!-- SEO META DESCRIPTION -->
+  <meta name="description" content="Discover original abstract paintings by Art Elias, a contemporary artist based in Zutphen, Netherlands. Explore modern artworks and custom abstract commissions.">
+
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://thisisartelias-1.jimdosite.com/">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/jpg" href="images/Welp.jpg">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     /* Full-screen background */
     body {
       margin: 0;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
-      background: url('images/X-ray art 58x78cm.jpg') no-repeat center 37%/cover;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: #ffffff;
       font-family: 'Raleway', sans-serif;
+      background: url('images/X-ray art 58x78cm.jpg') no-repeat center center/cover;
       position: relative;
     }
 
-    /* Overlay for better readability */
+    /* Overlay for readability */
     body::before {
       content: '';
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.55);
       z-index: 0;
     }
 
@@ -35,23 +48,27 @@
     .content {
       position: relative;
       z-index: 1;
-      max-width: 600px;
-      padding: 20px;
+      max-width: 650px;
+      padding: 30px 20px;
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 10px;
     }
 
     h1 {
       font-size: 48px;
       margin-bottom: 20px;
+      line-height: 1.2;
     }
 
     p {
-      font-size: 20px;
-      margin-bottom: 30px;
+      font-size: 18px;
+      margin-bottom: 25px;
+      line-height: 1.6;
     }
 
     a.button {
       display: inline-block;
-      padding: 15px 30px;
+      padding: 15px 35px;
       font-size: 18px;
       font-weight: bold;
       color: #fff;
@@ -65,17 +82,26 @@
       background-color: #55555f;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       h1 { font-size: 36px; }
       p { font-size: 16px; }
+      a.button { font-size: 16px; padding: 12px 25px; }
     }
   </style>
 </head>
 <body>
   <div class="content">
-    <h1>Welcome to the Official ThisIsArtElias.com landing page:</h1>
-    <p>Discover abstract art created by Elias. Explore unique paintings and canvas artwork. Visit the main website:</p>
-    <a href="https://thisisartelias-1.jimdosite.com/" class="button" rel="noopener noreferrer">Visit Main Website</a>
+    <h1>Abstract Art by Art Elias</h1>
+
+    <p>
+      Art Elias is a contemporary abstract artist based in Zutphen, the Netherlands. Known for expressive modern paintings and custom abstract commissions, his work explores emotion, texture, and movement through bold compositions.
+    </p>
+
+    <p>
+      Explore the full collection and learn more about commissions on the main site.
+    </p>
+
+    <a class="button" href="https://thisisartelias-1.jimdosite.com/">Visit the official ThisIsArtElias website</a>
   </div>
 </body>
 </html>
