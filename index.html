@@ -1,73 +1,91 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThisIsArtElias - Home</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav">
+<!-- Top Banner -->
+<div class="top-banner" id="top-banner">
+  Work in progress, some functions might not work
+  <span id="banner-close">&times;</span>
+</div>
+
+<!-- Navigation -->
+<nav>
   <div class="logo">ThisIsArtElias</div>
-  <div class="hamburger" id="hamburger">☰</div>
+
+  <div class="hamburger" id="hamburger">&#9776;</div>
 
   <ul id="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="portfolio.html">Portfolio</a></li>
     <li><a href="story.html">My Story</a></li>
     <li><a href="commissions.html">Commissions</a></li>
+    <li><a href="news.html">News</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
+
+  <div class="nav-actions">
+    <span id="lang-en" class="lang-switch">EN</span>
+    <span id="lang-nl" class="lang-switch">NL</span>
+    <span class="theme-switcher" id="theme-toggle">🌙</span>
+  </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>Abstract Art by Elias</h1>
-    <p>Minimal. Emotional. Black, grey and white.</p>
-    <a href="portfolio.html" class="cta">View Portfolio</a>
-  </div>
-</header>
-
-<!-- FEATURED GALLERY -->
-<section class="featured">
-  <h2>Featured Works</h2>
-
-  <div class="gallery">
-    <figure class="art fade-up">
-      <img src="images/X-ray-art-58x78cm.jpg" alt="Black and white abstract painting by Elias">
-    </figure>
-
-    <figure class="art fade-up delay">
-      <img src="images/picture2.jpeg" alt="Modern abstract canvas artwork">
-    </figure>
-
-    <figure class="art fade-up delay2">
-      <img src="images/WhatsApp-Image-2026-02-22-at-15.06.41.jpeg" alt="Textured monochrome abstract artwork">
-    </figure>
-  </div>
+<!-- Hero Section -->
+<section class="hero">
+  <h1>
+    <span class="lang-en">Abstract Art by Elias</span>
+    <span class="lang-nl">Abstracte Kunst door Elias</span>
+  </h1>
+  <p>
+    <span class="lang-en">Modern black, grey, and white abstract art & commissions.</span>
+    <span class="lang-nl">Moderne zwart, grijs en wit abstracte kunst en commissies.</span>
+  </p>
+  <a href="portfolio.html">
+    <span class="lang-en">View Portfolio</span>
+    <span class="lang-nl">Bekijk Portfolio</span>
+  </a>
 </section>
 
-<!-- ABOUT STRIP (very gallery-like) -->
-<section class="about-strip">
-  <div class="about-text fade-up">
-    <h2>About the Artist</h2>
-    <p>
-      Elias is a Dutch abstract artist focusing on emotion-driven compositions
-      using minimal colour palettes and layered textures.
-    </p>
-    <a href="story.html">Read My Story →</a>
+<!-- Featured Works -->
+<section>
+  <h2>
+    <span class="lang-en">Featured Works</span>
+    <span class="lang-nl">Uitgelichte Werken</span>
+  </h2>
+
+  <div class="portfolio-grid homepage-featured">
+    <img src="images/X-ray-art-58x78cm.jpg" alt="Art 1">
+    <img src="images/picture2.jpeg" alt="Art 2" class="zoom-out">
+    <img src="images/WhatsApp-Image-2026-02-22-at-15.06.41.jpeg" alt="Art 3" class="zoom-in">
   </div>
 </section>
 
 <!-- CTA -->
-<section class="cta-section fade-up">
-  <h2>Interested in a Commission?</h2>
-  <a href="contact.html" class="cta">Get in Touch</a>
+<section>
+  <h2>
+    <span class="lang-en">Get in Touch</span>
+    <span class="lang-nl">Neem Contact Op</span>
+  </h2>
+  <p>
+    <span class="lang-en">Interested in a commission or collaboration? Reach out!</span>
+    <span class="lang-nl">Geïnteresseerd in een commissie of samenwerking? Neem contact op!</span>
+  </p>
+  <a href="contact.html">
+    <span class="lang-en">Contact Me</span>
+    <span class="lang-nl">Contacteer Mij</span>
+  </a>
 </section>
 
 <footer>
-  <p>&copy; 2026 ThisIsArtElias</p>
+  &copy; 2026 ThisIsArtElias. All Rights Reserved.
 </footer>
 
 <script src="script.js"></script>
