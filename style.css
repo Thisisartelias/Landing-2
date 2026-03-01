@@ -336,7 +336,7 @@ body.light-mode a {
    =============================== */
 .hero-art {
   height: 70vh;
-  background: url("images/X-ray-art-58x78cm.jpg") center/cover no-repeat;
+  background: url("images/cbc374a1-fc2b-40c4-8a60-979754474e03.avif") center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -377,4 +377,8 @@ body.light-mode a {
 .hero-btn:hover {
   background: #fff;
   color: #000;
+}
+
+.hero {
+  text-align: center;
 }
