@@ -276,13 +276,18 @@ nav ul li a {
 
 /*to make the portfolio grid smaller*/
 
-.portfolio-grid {
+/* Homepage Featured Works */
+.homepage-featured {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* smaller items */
-  gap: 1rem; /* reduce spacing between items */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem; /* less padding than before */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.homepage-featured img {
+  width: 100%;
+  height: 200px; /* controls size */
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .portfolio-grid img {
