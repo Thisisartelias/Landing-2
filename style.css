@@ -32,6 +32,31 @@ body.light-mode {
   --banner-text: #111;
 }
 
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+section {
+  background: var(--section-bg);
+  color: var(--section-text);
+}
+
+form, form input, form textarea, form button {
+  background: var(--card-bg);
+  color: var(--section-text);
+  border-color: var(--btn-border);
+}
+
+.hero h1, .hero p, .hero a {
+  color: var(--text-color);
+}
+
+footer {
+  color: var(--text-color);
+}
+
 /* ===============================
    GLOBAL STYLES
    =============================== */
