@@ -31,27 +31,29 @@
 
 <section id="contact">
   <h2><span class="lang-en">Contact</span><span class="lang-nl">Contact</span></h2>
-<form
-  action="https://formspree.io/f/xpqjerdy"
-  method="POST"
->
-
- <label>
-    Name:
-    <textarea name="Name">
-    </textarea>
-  </label>
+<form class="contact-form" action="https://formspree.io/f/xpqjerdy" method="POST">
   <label>
-    Your email:
+    <span class="lang-en">Name:</span>
+    <span class="lang-nl">Naam:</span>
+    <textarea name="name"></textarea>
+  </label>
+
+  <label>
+    <span class="lang-en">Your email:</span>
+    <span class="lang-nl">Uw e-mail:</span>
     <input type="email" name="email">
   </label>
+
   <label>
-    Your message:
-    <textarea name="message">
-    </textarea>
+    <span class="lang-en">Your message:</span>
+    <span class="lang-nl">Uw bericht:</span>
+    <textarea name="message"></textarea>
   </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
+
+  <button type="submit">
+    <span class="lang-en">Send</span>
+    <span class="lang-nl">Verzenden</span>
+  </button>
 </form>
 
 <div class="form-success" style="display:none; text-align:center; margin-top:1rem; color:#0f0;">
