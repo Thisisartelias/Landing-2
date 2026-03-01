@@ -35,3 +35,14 @@ images.forEach(img => {
 
 closeBtn.addEventListener('click', () => modal.style.display='none');
 window.addEventListener('click', e => { if(e.target === modal) modal.style.display='none'; });
+
+
+// Dismissible Top Banner
+const banner = document.getElementById('top-banner');
+const bannerClose = document.getElementById('banner-close');
+
+if (bannerClose) {
+  bannerClose.addEventListener('click', () => {
+    banner.style.display = 'none';
+  });
+}
