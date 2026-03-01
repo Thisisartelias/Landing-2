@@ -1,5 +1,5 @@
 /* ===============================
-   BASE THEME VARIABLES
+   THEME VARIABLES
    =============================== */
 
 /* Dark theme (default) */
@@ -13,9 +13,11 @@
   --btn-border: #444;
   --card-bg: #333;
   --card-border: #ccc;
+  --banner-bg: #ff7f00;
+  --banner-text: #111;
 }
 
-/* Light theme overrides */
+/* Light theme */
 body.light-mode {
   --bg-color: #f5f5f5;
   --text-color: #111;
@@ -26,34 +28,12 @@ body.light-mode {
   --btn-border: #aaa;
   --card-bg: #fafafa;
   --card-border: #ccc;
-}
-
-body {
-  background: var(--bg-color);
-  color: var(--text-color);
-}
-
-section {
-  background: var(--section-bg);
-  color: var(--section-text);
-}
-
-form, form input, form textarea, form button {
-  background: var(--card-bg);
-  color: var(--section-text);
-  border-color: var(--btn-border);
-}
-
-.hero h1, .hero p, .hero a {
-  color: var(--text-color);
-}
-
-footer {
-  color: var(--text-color);
+  --banner-bg: #ffcc66;
+  --banner-text: #111;
 }
 
 /* ===============================
-   GLOBAL STYLES
+   BASE STYLES
    =============================== */
 body {
   background: var(--bg-color);
@@ -62,6 +42,17 @@ body {
   margin: 0;
   line-height: 1.6;
   transition: background 0.3s, color 0.3s;
+}
+
+section {
+  background: var(--section-bg);
+  color: var(--section-text);
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 /* Top banner */
@@ -74,20 +65,21 @@ body {
   position: relative;
 }
 
-/* Banner close button */
 .top-banner span#banner-close {
   float: right;
   cursor: pointer;
   font-weight: bold;
 }
 
-/* Navbar */
+/* ===============================
+   NAVIGATION
+   =============================== */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #222;
+  background: var(--section-bg);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -96,7 +88,7 @@ nav {
 nav .logo {
   font-weight: 700;
   font-size: 1.5rem;
-  color: #eee;
+  color: var(--text-color);
 }
 
 nav ul {
@@ -111,60 +103,54 @@ nav ul li a {
   display: block;
   padding: 0.6rem 1rem;
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  background: var(--btn-bg); /* button background */
-  color: var(--btn-text);    /* button text follows theme */
+  background: var(--btn-bg);
+  color: var(--btn-text);
   border-radius: 5px;
-  transition: background 0.3s, color 0.3s;
   border: 1px solid var(--btn-border);
+  transition: background 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #ff7f00;
+  background: var(--btn-text);
+  color: var(--btn-bg);
+  border-color: var(--btn-text);
 }
 
-nav .lang-switch {
+nav .lang-switch,
+nav .theme-switcher {
   margin-left: 1rem;
   cursor: pointer;
   font-weight: bold;
 }
 
-nav .theme-switcher {
-  margin-left: 1rem;
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 2rem;
   cursor: pointer;
-  font-size: 1.2rem;
 }
 
 /* ===============================
-   SECTIONS
+   HERO SECTION
    =============================== */
-section {
-  background: var(--section-bg);
-  color: var(--section-text);
-  padding: 6rem 2rem;
-  max-width: 1200px;
-  margin: 2rem auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-}
-
-/* Hero */
 .hero {
-  padding: 3rem 1rem; /* reduce top/bottom space */
+  padding: 3rem 1rem;
   text-align: center;
-  max-width: 900px; /* optional: prevent it from stretching too wide on large screens */
+  max-width: 900px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero h1 {
-  font-size: 2rem; /* smaller than full-page hero */
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1.1rem; /* reduce paragraph size */
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -180,37 +166,8 @@ section {
   transition: background 0.3s, color 0.3s;
 }
 
-/* Mobile adjustments */
-@media (max-width: 480px) {
-  .hero {
-    padding: 2rem 1rem;
-  }
-
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .hero a {
-    width: 100%;
-    text-align: center;
-    padding: 0.7rem 0;
-  }
-
-.hero {
-  max-height: 60vh; /* hero takes max 60% of viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-}
-
 /* ===============================
-   BUTTONS
+   BUTTONS & LINKS
    =============================== */
 button, a {
   background: var(--btn-bg);
@@ -238,7 +195,6 @@ form {
   color: var(--section-text);
   padding: 2rem;
   border-radius: 8px;
-  transition: background 0.3s, color 0.3s;
 }
 
 form input, form textarea {
@@ -248,7 +204,6 @@ form input, form textarea {
   background: var(--card-bg);
   color: var(--section-text);
   font-family: inherit;
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
 
 form input:focus, form textarea:focus {
@@ -256,7 +211,6 @@ form input:focus, form textarea:focus {
   border-color: #ff7f00;
 }
 
-/* Success message */
 .form-success {
   display: none;
   text-align: center;
@@ -266,153 +220,34 @@ form input:focus, form textarea:focus {
 }
 
 /* ===============================
-   PORTFOLIO GRID
+   MEDIA QUERIES
    =============================== */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.portfolio-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  border: 2px solid var(--card-border);
-  transition: transform 0.3s, border-color 0.3s;
-}
-
-.portfolio-grid img:hover {
-  transform: scale(1.05);
-  border-color: #ff7f00;
-}
-
-/* ===============================
-   NEWS CARDS
-   =============================== */
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.news-item {
-  padding: 1.5rem;
-  background: var(--card-bg);
-  color: var(--section-text);
-  border: 2px solid var(--card-border);
-  border-radius: 8px;
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
-}
-
-/* ===============================
-   FOOTER
-   =============================== */
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #222;
-  color: #eee;
-  transition: background 0.3s, color 0.3s;
-}
-
-/* ===============================
-   TRANSITIONS
-   =============================== */
-body, section, button, a, form, input, textarea, .portfolio-grid img, .news-item, footer {
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
-}
-
 @media (max-width: 768px) {
-  /* Navbar stacks vertically */
   nav ul {
     flex-direction: column;
-    gap: 1rem;
-    padding: 0.5rem 0;
+    gap: 0.5rem;
+    display: none;
+    width: 100%;
+  }
+  nav ul.active {
+    display: flex;
   }
   nav {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
   }
   nav .lang-switch, nav .theme-switcher {
     margin-top: 0.5rem;
   }
-
-  /* Hero text and button smaller */
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .hero a {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
-
-  /* Section padding and margins smaller */
-  section {
-    padding: 3rem 1rem;
-    margin: 1rem;
-  }
-
-  /* Form fields full width */
-  form input, form textarea, form button {
-    width: 100%;
-    box-sizing: border-box;
-  }
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
+  .hero a { font-size: 0.9rem; padding: 0.5rem 1rem; width: 100%; text-align: center; }
+  section { padding: 3rem 1rem; margin: 1rem; }
+  form input, form textarea, form button { width: 100%; box-sizing: border-box; }
+  .hamburger { display: block; }
 }
 
 @media (max-width: 480px) {
-  /* Portfolio & news grids single column */
-  .portfolio-grid, .news-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  /* Banner smaller */
-  .top-banner {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-  }
-}
-
-
-/* ===============================
-   MOBILE / RESPONSIVE FIXES
-   =============================== */
-
-/* Hide nav links on mobile by default */
-@media (max-width: 768px) {
-  #nav-links {
-    display: none;
-    flex-direction: column;
-    background: var(--section-bg);
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  #nav-links.active {
-    display: flex;
-  }
-
-  #nav-links li a {
-    padding: 0.8rem 1rem;
-    border-bottom: 1px solid var(--btn-border);
-    display: block;
-  }
-
-  .hamburger {
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-
-  .nav-actions {
-    margin-top: 0.5rem;
-    display: flex;
-    gap: 0.5rem;
-  }
+  .portfolio-grid, .news-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .top-banner { font-size: 0.9rem; padding: 0.5rem; }
 }
