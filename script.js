@@ -46,3 +46,24 @@ if (bannerClose) {
     banner.style.display = 'none';
   });
 }
+
+const enEls = document.querySelectorAll('.lang-en');
+const nlEls = document.querySelectorAll('.lang-nl');
+const enBtn = document.getElementById('lang-en');
+const nlBtn = document.getElementById('lang-nl');
+
+function setLanguage(lang) {
+  if(lang === 'en') {
+    enEls.forEach(el => el.style.display='inline');
+    nlEls.forEach(el => el.style.display='none');
+  } else {
+    enEls.forEach(el => el.style.display='none');
+    nlEls.forEach(el => el.style.display='inline');
+  }
+}
+
+enBtn.addEventListener('click', () => setLanguage('en'));
+nlBtn.addEventListener('click', () => setLanguage('nl'));
+
+// Initialize default language
+setLanguage('en');
