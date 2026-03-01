@@ -156,3 +156,20 @@ toggle.addEventListener("click", () => {
   localStorage.setItem("theme", isLight ? "light" : "dark");
   toggle.textContent = isLight ? "☀️" : "🌙";
 });
+
+// inside DOMContentLoaded
+function setLanguage(lang) {
+  const enEls = document.querySelectorAll('.lang-en');
+  const nlEls = document.querySelectorAll('.lang-nl');
+
+  if(lang === 'en') {
+    enEls.forEach(el => el.style.display = 'inline');
+    nlEls.forEach(el => el.style.display = 'none');
+  } else {
+    enEls.forEach(el => el.style.display = 'none');
+    nlEls.forEach(el => el.style.display = 'inline');
+  }
+}
+
+// initialize default language
+setLanguage('en'); 
