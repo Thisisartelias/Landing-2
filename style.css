@@ -260,26 +260,42 @@ form input, form textarea {
   }
 }
 
-/* ===============================
-   MOBILE
-   =============================== */
+/* ==============================
+   MOBILE FIXES
+   ============================== */
 @media (max-width: 768px) {
-  .homepage-featured {
-    grid-template-columns: 1fr;
+  nav {
+    padding: 1rem; /* reduce horizontal padding */
+    flex-wrap: wrap; /* allow items to wrap instead of overflowing */
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto; /* push it to the right */
   }
 
   nav ul {
     display: none;
     flex-direction: column;
     width: 100%;
+    padding-left: 0; /* remove default ul padding */
+    margin: 0;
+    box-sizing: border-box; /* make sure width includes padding */
   }
 
   nav ul.active {
     display: flex;
   }
 
-  .hamburger {
-    display: block;
+  nav .logo {
+    flex: 1 1 auto; /* allow logo to take remaining space */
+  }
+
+  nav .nav-actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* or flex-end if you like */
+    margin-top: 0.5rem;
   }
 }
 
