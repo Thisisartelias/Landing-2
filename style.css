@@ -291,3 +291,20 @@ nav {
 section {
   transition: background 0.4s ease;
 }
+
+.light-mode {
+  background: #f8f8f8;
+  color: #111;
+}
+
+.light-mode nav {
+  background: rgba(255,255,255,0.8);
+}
+
+.light-mode .about-strip {
+  background: #eee;
+}
+
+.light-mode footer {
+  background: #ddd;
+}
