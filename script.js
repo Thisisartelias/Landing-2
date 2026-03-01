@@ -107,3 +107,24 @@ if(hamburger && navLinks){
     navLinks.classList.toggle('active');
   });
 }
+
+
+const toggle = document.getElementById("theme-toggle");
+
+// Load saved theme
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light-mode");
+  toggle.textContent = "☀️";
+}
+
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+
+  if (document.body.classList.contains("light-mode")) {
+    localStorage.setItem("theme", "light");
+    toggle.textContent = "☀️";
+  } else {
+    localStorage.setItem("theme", "dark");
+    toggle.textContent = "🌙";
+  }
+});
