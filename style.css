@@ -2,7 +2,7 @@
    BASE THEME VARIABLES
    =============================== */
 
-/* Dark mode (default) */
+/* Dark theme (default) */
 :root {
   --bg-color: #1a1a1a;
   --text-color: #eee;
@@ -13,11 +13,9 @@
   --btn-border: #444;
   --card-bg: #333;
   --card-border: #ccc;
-  --banner-bg: #ff7f00; /* orange top banner */
-  --banner-text: #111;
 }
 
-/* Light mode overrides */
+/* Light theme overrides */
 body.light-mode {
   --bg-color: #f5f5f5;
   --text-color: #111;
@@ -28,10 +26,7 @@ body.light-mode {
   --btn-border: #aaa;
   --card-bg: #fafafa;
   --card-border: #ccc;
-  --banner-bg: #ffa500; /* softer orange for light mode */
-  --banner-text: #111;
 }
-
 
 body {
   background: var(--bg-color);
