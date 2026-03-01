@@ -300,14 +300,8 @@ nav ul li a {
   border-color: #ff7f00;
 }
 
-/*zoom levels homepage*/
-
-/* Homepage Featured Works Grid */
 .homepage-featured {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-  justify-items: center;
+  max-height: none; /* Ensure all images can show */
 }
 
 .homepage-featured img {
