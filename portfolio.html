@@ -9,8 +9,10 @@
 </head>
 <body>
 
-<div class="top-banner">
+<!-- Top Banner -->
+<div class="top-banner" id="top-banner">
   Work in progress, some functions might not work
+  <span id="banner-close">&times;</span>
 </div>
 
 <nav>
@@ -26,24 +28,27 @@
   <div>
     <span id="lang-en" class="lang-switch">EN</span>
     <span id="lang-nl" class="lang-switch">NL</span>
+    <span class="theme-switcher" id="theme-toggle">🌙</span>
   </div>
 </nav>
 
-<section id="portfolio">
-  <h2><span class="lang-en">Portfolio</span><span class="lang-nl">Portfolio</span></h2>
+<section>
+  <h1>
+    <span class="lang-en">Portfolio</span>
+    <span class="lang-nl">Portfolio</span>
+  </h1>
+  <p>
+    <span class="lang-en">Explore my full collection of abstract artworks.</span>
+    <span class="lang-nl">Bekijk mijn volledige collectie abstracte kunstwerken.</span>
+  </p>
   <div class="portfolio-grid">
     <img src="images/art1.jpg" alt="Art 1">
     <img src="images/art2.jpg" alt="Art 2">
     <img src="images/art3.jpg" alt="Art 3">
     <img src="images/art4.jpg" alt="Art 4">
+    <img src="images/art5.jpg" alt="Art 5">
   </div>
 </section>
-
-<!-- Modal for enlarging images -->
-<div class="modal" id="modal">
-  <span class="close" id="close">&times;</span>
-  <img id="modal-img" src="" alt="Expanded Art">
-</div>
 
 <footer>
   &copy; 2026 ThisIsArtElias. All Rights Reserved.
