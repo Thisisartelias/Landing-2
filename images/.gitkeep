@@ -1,1 +1,2 @@
-
+# Auto convert to LF on commit (good for web projects)
+git config --global core.autocrlf input
