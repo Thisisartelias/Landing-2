@@ -9,8 +9,9 @@
 </head>
 <body>
 
-<div class="top-banner">
+<div class="top-banner" id="top-banner">
   Work in progress, some functions might not work
+  <span id="banner-close">&times;</span>
 </div>
 
 <nav>
@@ -26,19 +27,25 @@
   <div>
     <span id="lang-en" class="lang-switch">EN</span>
     <span id="lang-nl" class="lang-switch">NL</span>
+    <span class="theme-switcher" id="theme-toggle">🌙</span>
   </div>
 </nav>
 
-<section id="news">
-  <h2><span class="lang-en">News</span><span class="lang-nl">Nieuws</span></h2>
+<section>
+  <h1>
+    <span class="lang-en">News</span>
+    <span class="lang-nl">Nieuws</span>
+  </h1>
+  <p>
+    <span class="lang-en">Stay updated with my latest projects, exhibitions, and releases.</span>
+    <span class="lang-nl">Blijf op de hoogte van mijn nieuwste projecten, tentoonstellingen en releases.</span>
+  </p>
   <div class="news-grid">
-    <div class="news-item">
-      <h3><span class="lang-en">No news yet>/span><span class="lang-nl">Nog geen nieuws</span></h3>
-      <p>
-        <span class="lang-en">No news here</span>
-        <span class="lang-nl">Geen nieuws</span>
-      </p>
-    </div>
+    <article>
+      <h2>No news</h2>
+      <p>No news at the moment.</p>
+    </article>
+  </div>
 </section>
 
 <footer>
