@@ -67,3 +67,26 @@ nlBtn.addEventListener('click', () => setLanguage('nl'));
 
 // Initialize default language
 setLanguage('en');
+
+
+const themeToggle = document.getElementById('theme-toggle');
+
+// Load saved theme from localStorage
+const savedTheme = localStorage.getItem('theme');
+if(savedTheme) {
+  document.body.classList.add(savedTheme);
+  themeToggle.textContent = savedTheme === 'light-mode' ? '🌙' : '☀️';
+}
+
+// Toggle theme on click
+themeToggle.addEventListener('click', () => {
+  if(document.body.classList.contains('light-mode')) {
+    document.body.classList.remove('light-mode');
+    localStorage.setItem('theme', '');
+    themeToggle.textContent = '🌙';
+  } else {
+    document.body.classList.add('light-mode');
+    localStorage.setItem('theme', 'light-mode');
+    themeToggle.textContent = '☀️';
+  }
+});
