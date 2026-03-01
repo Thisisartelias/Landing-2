@@ -330,3 +330,51 @@ body.light-mode a {
   display: inline-block;  /* ensures the button stays centered */
   margin-top: 1rem;
 }
+
+/* ===============================
+   HERO ART BACKGROUND
+   =============================== */
+.hero-art {
+  height: 70vh;
+  background: url("images/X-ray-art-58x78cm.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark overlay for readability */
+.hero-overlay {
+  background: rgba(0,0,0,0.55);
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  backdrop-filter: blur(3px);
+}
+
+.hero-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Button */
+.hero-btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #fff;
+  color: #000;
+}
