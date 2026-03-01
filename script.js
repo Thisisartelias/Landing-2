@@ -171,5 +171,10 @@ function setLanguage(lang) {
   }
 }
 
-// initialize default language
-setLanguage('en'); 
+
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  themeToggle.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+  localStorage.setItem('theme', document.body.className);
+});
