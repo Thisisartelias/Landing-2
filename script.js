@@ -128,3 +128,31 @@ toggle.addEventListener("click", () => {
     toggle.textContent = "🌙";
   }
 });
+
+const toggle = document.getElementById("theme-toggle");
+
+// 1️⃣ Check if user already chose a theme before
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+  document.body.classList.toggle("light-mode", savedTheme === "light");
+  toggle.textContent = savedTheme === "light" ? "☀️" : "🌙";
+} else {
+  // 2️⃣ If no saved theme → detect system preference
+  const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+
+  if (systemPrefersLight) {
+    document.body.classList.add("light-mode");
+    toggle.textContent = "☀️";
+  }
+}
+
+// 3️⃣ Manual toggle still works + overrides system
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+
+  const isLight = document.body.classList.contains("light-mode");
+
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+  toggle.textContent = isLight ? "☀️" : "🌙";
+});
