@@ -141,3 +141,11 @@ button:hover, a:hover {
   background: var(--card-bg);
   border: 2px solid var(--card-border);
 }
+
+body {
+  transition: background 0.3s, color 0.3s;
+}
+
+section, button, a, .portfolio-grid img, .news-item {
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
