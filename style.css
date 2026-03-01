@@ -381,3 +381,23 @@ body.light-mode a {
 .hero {
   text-align: center;
 }
+
+/*Featured works cleaner*/
+
+.portfolio-grid img,
+.homepage-featured img {
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+portolio-grid img:hover,
+.homepage-featured img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+
+/*scoll animation*/
+.fade-up { opacity: 0; transform: translateY(30px); transition: all .6s ease; }
+.fade-up.animate { opacity: 1; transform: translateY(0); }
