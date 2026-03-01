@@ -278,3 +278,16 @@ footer {
   padding: 40px;
   background: #000;
 }
+
+
+body {
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+nav {
+  transition: background 0.4s ease;
+}
+
+section {
+  transition: background 0.4s ease;
+}
