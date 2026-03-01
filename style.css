@@ -203,3 +203,78 @@ form input, form textarea {
     display: flex;
   }
 }
+
+/* ===== Base ===== */
+.hero-content {
+  position: relative;
+  text-align: center;
+  animation: fadeUp 1s ease forwards;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background: white;
+  color: black;
+}
+
+/* ===== Gallery ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.art img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.art:hover img {
+  transform: scale(1.05);
+}
+
+/* ===== About Strip ===== */
+.about-strip {
+  background: #181818;
+  text-align: center;
+}
+
+.about-text a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+/* ===== Animations ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s forwards;
+}
+
+.delay { animation-delay: 0.2s; }
+.delay2 { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #000;
+}
