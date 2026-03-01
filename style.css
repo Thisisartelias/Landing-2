@@ -273,3 +273,29 @@ nav ul li a {
   font-weight: bold;
   position: relative;
 }
+
+/*to make the portfolio grid smaller*/
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* smaller items */
+  gap: 1rem; /* reduce spacing between items */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem; /* less padding than before */
+}
+
+.portfolio-grid img {
+  width: 100%;
+  height: auto; /* keep aspect ratio */
+  max-height: 250px; /* limit vertical size */
+  object-fit: cover; /* crop if needed without stretching */
+  border-radius: 6px;
+  border: 2px solid var(--card-border);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.portfolio-grid img:hover {
+  transform: scale(1.05);
+  border-color: #ff7f00;
+}
