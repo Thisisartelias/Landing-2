@@ -271,3 +271,58 @@ footer {
 body, section, button, a, form, input, textarea, .portfolio-grid img, .news-item, footer {
   transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
+
+@media (max-width: 768px) {
+  /* Navbar stacks vertically */
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  nav .lang-switch, nav .theme-switcher {
+    margin-top: 0.5rem;
+  }
+
+  /* Hero text and button smaller */
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero a {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Section padding and margins smaller */
+  section {
+    padding: 3rem 1rem;
+    margin: 1rem;
+  }
+
+  /* Form fields full width */
+  form input, form textarea, form button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Portfolio & news grids single column */
+  .portfolio-grid, .news-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Banner smaller */
+  .top-banner {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}
