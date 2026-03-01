@@ -328,3 +328,12 @@ nav ul li a {
   transform: scale(1.08);
   border-color: #ff7f00;
 }
+
+@media (max-width: 768px) {
+  .homepage-featured img {
+    height: 180px;
+  }
+  .homepage-featured img.zoom-in {
+    transform: scale(1.03);
+  }
+}
