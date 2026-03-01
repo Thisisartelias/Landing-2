@@ -382,53 +382,36 @@ body, section, button, a, form, input, textarea, .portfolio-grid img, .news-item
    MOBILE / RESPONSIVE FIXES
    =============================== */
 
-/* Nav + language + theme buttons for tablets/phones */
+/* Hide nav links on mobile by default */
 @media (max-width: 768px) {
-  nav {
+  #nav-links {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-
-  nav ul {
-    display: flex;
-    flex-direction: column;
+    background: var(--section-bg);
     width: 100%;
-    gap: 0.5rem;
+    margin: 0;
     padding: 0;
-    margin: 0.5rem 0;
   }
 
-  nav ul li a {
+  #nav-links.active {
+    display: flex;
+  }
+
+  #nav-links li a {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--btn-border);
     display: block;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
   }
 
-  nav .lang-switch,
-  nav .theme-switcher {
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .nav-actions {
     margin-top: 0.5rem;
-    display: inline-block;
-    font-size: 0.9rem;
-  }
-}
-
-/* Hero CTA button on small phones */
-@media (max-width: 480px) {
-  .hero a {
-    width: 100%;
-    text-align: center;
-    padding: 0.8rem 0;
-    font-size: 1rem;
-    margin: 0.5rem 0;
-  }
-
-  /* Form buttons and inputs */
-  form input,
-  form textarea,
-  form button {
-    width: 100%;
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
   }
 }
